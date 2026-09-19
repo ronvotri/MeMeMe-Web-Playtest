@@ -1,0 +1,24 @@
+MeMeMe OUTLIER REPLAY PACK 0.1.70
+Career Traits intentionally change Jail/Hospital release odds and expand the Job pool from 10 to 12.
+Historical 0.1.63.4 fingerprints remain in tests/outlier-replay-0634.ts and are not rewritten.
+seed=611102 reason=0.1.70-longest-match
+checksum=56c6487d
+turns=92 commands=145 submitted=128 hostAuto=17
+moneyTotal=1570 spread=177
+movement=76 release=22 cards=14 news=8
+mini=12 miniResolved=12 miniPayout=565
+jobs=4 lottery=1/40B$
+finishIds=3,2,1,0
+finalMoney=365,323,500,382
+finishPlaces=4,3,2,1
+seed=611112 reason=0.1.70-largest-money-spread
+checksum=a5aa724b
+turns=76 commands=124 submitted=110 hostAuto=14
+moneyTotal=1885 spread=399
+movement=68 release=15 cards=14 news=8
+mini=10 miniResolved=10 miniPayout=380
+jobs=3 lottery=2/180B$
+finishIds=1,2,0,3
+finalMoney=432,341,372,740
+finishPlaces=3,1,2,4
+LOCKED: exact 0.1.70 Career Traits outlier fingerprints selected from the 32-match deterministic batch.

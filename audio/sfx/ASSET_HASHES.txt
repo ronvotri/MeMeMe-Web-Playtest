@@ -1,0 +1,23 @@
+MeMeMe MVP 0.1.36 event SFX
+
+Repository Git blob IDs:
+card.ogg       940079a1a0d92150ef0c39012a68b1c9cd8b1d33
+choice.ogg     0eff4b66509b8cbcb6e8dd51159c68a0f3db7245
+dice.ogg       64722c1007c6524e74455b120fc72d520c977132
+money_gain.ogg 9b53465ade8a52f8d1345cb6b5c3faf9e8a8a2ab
+money_loss.ogg 1901894eed00c8a09cc0d7da876eea8f663b28c4
+news.ogg       6c4a285260562b32acb2b87a2b4e827a45b2a01a
+step.ogg       e3f8a761da9f1dda25ce829aa94d69d85b4036e0
+victory.ogg    981feab53c0443f1c34d22c65c8078664dabe958
+
+User-supplied source SHA256:
+card.MP3       032112e8121f7c8db7e8e351f264c22bf37733453b23c8191fbb00732821a157
+choice.MP3     74d88cc3e2c43d912b63aa9730d2f973ecc7562e180378395665982709b273ce
+dice.MP3       fc11f8e50fc95efac4e621219bcd831feb4cca95d8ed32b7473617305af5659e
++ money(1).MP3 2a5df6c39b83e6f76486e2c2b0333fce68862140cb251c7c9ba9e193c2740d51
+- money.MP3    79a9f228e26019e44f7fc8b37982854aa9eb194dbded40006035f29173226180
+news.MP3       49b1087c7720536513b58cb19af5bd37b9c6792d45058f0059bb13ca2c1bba89
+step.MP3       543200ebc28092aa8c46b47e8be62adbf5d5d2e5c9003bb544622dd1e8e0f05a
+victory.MP3    59310556bd01b07370c7e3f29d3b34d190048295c77058725369020580f85bff
+
+Mini Game BGM is NOT an extra uploaded track. It reuses the approved checksum-locked public/audio/bgm/03_City_Silly.ogg.
