@@ -1,0 +1,10 @@
+{
+  "name": "MeMeMe Board Game",
+  "short_name": "MeMeMe",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#f4ead7",
+  "theme_color": "#202020"
+}
