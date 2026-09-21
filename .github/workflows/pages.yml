@@ -25,15 +25,34 @@ jobs:
       - name: Checkout compiled mirror
         uses: actions/checkout@v4
 
-      - name: Stage compiled site
+      - name: Stage and validate compiled site
+        shell: bash
         run: |
+          set -euo pipefail
           test -f index.html
+          test -d assets
+
+          rm -rf site
           mkdir -p site
-          cp index.html site/index.html
-          if [ -d assets ]; then cp -R assets site/assets; fi
-          if [ -d audio ]; then cp -R audio site/audio; fi
-          if [ -f manifest.webmanifest ]; then cp manifest.webmanifest site/manifest.webmanifest; fi
+
+          # Mirror every compiled root asset while keeping repo/workflow metadata out
+          # of the Pages artifact. This prevents future public files from being
+          # silently omitted when the Vite output grows.
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name '.git' \
+            ! -name '.github' \
+            ! -name 'site' \
+            -exec cp -a {} site/ \;
+
           touch site/.nojekyll
+
+          js_asset="$(sed -n 's/.*src="\.\/\([^"]*\.js\)".*/\1/p' site/index.html | head -n1)"
+          css_asset="$(sed -n 's/.*href="\.\/\([^"]*\.css\)".*/\1/p' site/index.html | head -n1)"
+          test -n "$js_asset" && test -f "site/$js_asset"
+          test -n "$css_asset" && test -f "site/$css_asset"
+          test -f site/manifest.webmanifest
+          test -f site/audio/bgm/01_Menu_MeMeMe.ogg
+          test -f site/audio/sfx/dice.ogg
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
