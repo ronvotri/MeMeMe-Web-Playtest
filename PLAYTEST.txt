@@ -1,67 +1,72 @@
-MeMeMe MVP 0.1.68 — VERTICAL SLICE STABILIZATION
+MMM PLAYTEST 0.1.70.4.30 — RELEASE CANDIDATE CLEANUP
 
 QUICK START — WINDOWS
 1) Giải nén file ZIP playtest.
 2) DOUBLE-CLICK: START_PLAYTEST.bat
 3) Trình duyệt tự mở local playtest server.
 4) GIỮ cửa sổ terminal launcher mở trong lúc chơi.
+5) Không mở index.html trực tiếp. Nếu thanh địa chỉ bắt đầu bằng file:/// thì hãy đóng tab và chạy START_PLAYTEST.bat.
+6) Chỉ dùng START_PLAYTEST.bat.
 
-CHỈ CÒN 1 FLOW MẶC ĐỊNH
-- Chỉ dùng START_PLAYTEST.bat.
-- Flow chuẩn: Menu → Setup → Chọn luật → Roll For Order → Trận → Podium → Rematch.
-- Hai launcher Draft D preview/full-map cũ không còn ship trong gói tester.
-- KHÔNG double-click index.html trực tiếp.
-- Nếu thanh địa chỉ bắt đầu bằng file:///C:/... thì browser có thể chặn ES module/local asset.
+FLOW CHUẨN
+Menu → Setup → Chọn nhân vật → Chọn 1/2/3 vòng → Roll For Order → Trận → Podium → Rematch/Lobby.
 
-TRƯỚC TRẬN — CHỌN LUẬT CHƠI
-- Sau FACE SETUP, bấm TIẾP TỤC để mở màn CHỌN LUẬT CHƠI riêng.
-- Chọn 1 / 2 / 3 LƯỢT, tương ứng 1 / 2 / 3 vòng cho mỗi người.
-- Mặc định = 1 vòng để giữ hành vi playtest cũ.
-- Đây là luật thật: chỉ khi tất cả người chơi hoàn thành đủ số vòng đã chọn thì game mới chốt kết quả B$.
+NHÂN VẬT & NỘI TẠI
+- KHÓC NHÈ / ĐƯỢC DỖ: 40% khi mất ít nhất 20B$, hoàn 10B$.
+- CAU CÓ / ĐỪNG CHỌC TUI: 50% khi bị Card target trực tiếp, giật lại 5B$.
+- LO LẮNG / LO XA: 20% đầu lượt hợp lệ khi tay chưa đầy, rút thêm 1 Card.
+- TĂNG ĐỘNG / KHÔNG NGỒI YÊN: 45% khi vào Mini Game, +5B$.
+- SECRET BABY / BÉ CƯNG CỦA VŨ TRỤ: 60% khi mất ít nhất 20B$, hoàn 15B$.
+- Tất cả roll nội tại do HOST/replay RNG quyết định. Không có client Math.random().
 
-0.1.68 FOCUS
-- Một visible build version duy nhất cho Menu / Setup / Roll For Order / board.
-- Popup JOB phải che sạch legacy Job/HUD copy trong lúc modal đang mở.
-- Mobile landscape/fullscreen dùng icon ⛶ dưới nút Settings; khi fullscreen icon đổi thành ↙.
-- Podium → CHƠI LẠI phải reset trận sạch; VỀ LOBBY quay đúng menu.
-- CPU stress + deterministic full-match simulation + 1/2/3-lap guard chạy trong CI.
-- TIN TỨC / LÁ BÀI giữ nguyên tên.
+MINI GAME
+- M17: BA CỬA.
+- M26: PHAO ĐƠN.
+- M35: CẮT TOP XÚC XẮC.
+- M44: ĐUA 3 CHẶNG.
+- Khi còn đúng 2 người, dùng OẲN TÙ XÌ để phân hạng 1–2 theo luật hiện tại.
+
+MATCH LENGTH & ECONOMY
+- Chọn 1 / 2 / 3 vòng cho mỗi người.
+- B$ của người đã hoàn thành đủ vòng được khóa.
+- Character-enabled audit 1/2/3 vòng đã qua CI, chưa thấy runaway inflation hoặc runaway match length.
+
+ONLINE
+- Host giữ authority gameplay.
+- P2–P4 reclaim đúng ghế bằng reconnect token.
+- Người mới không được vào sau Start.
+- Socket cũ sau reconnect không còn logical authority và không được relay action.
+- Ghost-seat / repeated reconnect stress đã qua live Worker audit.
 
 JAIL / HOSPITAL
 - Thả thành công: đứng nguyên ở TÙ/BV.
 - Release D6 chỉ dùng để thoát giữ.
-- Sau đó dùng một fresh movement D6 trong cùng lượt.
-- J1/J2/J3 và H1/H2/H3 = -20 B$ khi đáp xuống.
+- Sau đó dùng fresh movement D6 trong cùng lượt.
+- J1/J2/J3 và H1/H2/H3 = -20B$ khi đáp xuống.
 
-JOB
-- Nếu Job xuất hiện giữa movement, xử lý Job xong tiếp tục số pip còn lại của cùng viên D6.
-- Job Dice: 1–2 = A, 3–4 = B, 5–6 = C.
-
-PRESENTATION SYNC
+JOB & PRESENTATION
+- Nếu Job xuất hiện giữa movement, xử lý Job xong tiếp tục số pip còn lại.
 - ROLL → MOVE → ARRIVE → EFFECT → HUD B$ UPDATE.
-- Không được cộng/trừ tiền trước khi token tới ô.
-- Khi chọn LÁ BÀI / mục tiêu, xúc xắc movement phải ẩn.
+- Card/News/Job/Mini Game dùng canonical single-owner presentation.
+- Nội dung dài phải scroll trong khung, không shrink chữ để nhét.
 
-CAMERA
-- Người đang animate movement phải luôn được camera follow/center.
-- TỔNG QUAN / O là ngoại lệ cố ý.
-
-GAMEPAD / STEAM DECK
-- D-pad: di chuyển lựa chọn UI Phaser.
-- A: xác nhận lựa chọn hiện tại.
-- Chuột/touch vẫn dùng song song.
-
-MOBILE
-- Ưu tiên landscape.
-- Icon ⛶ dưới ⚙️ yêu cầu browser fullscreen bằng thao tác người dùng.
-- Browser nào không cho orientation lock vẫn phải giữ responsive viewport dùng được.
+STEAM DECK / TAY CẦM
+- D-pad / cần trái: di chuyển lựa chọn.
+- A: xác nhận / đổ xúc xắc.
+- B: quay lại.
+- X: tổng quan bàn cờ.
+- Y: dùng Lá Bài.
+- ☰ (Start): mở cài đặt.
+- Mobile/Steam Deck có nút fullscreen khi browser hỗ trợ.
 
 AUDIO
-- Card SFX = 80% mức cũ.
-- Step SFX = 130% mức cũ.
+- BGM/SFX được đóng gói cùng compiled runtime.
+- Nếu Settings báo thiếu file audio, ghi lại tên file hiển thị và báo cùng screenshot.
 
-ONLINE PLAYTEST
-- Cùng compiled runtime với bản ZIP tester.
-- Public web repo chỉ chứa compiled browser build, không chứa private TypeScript source/tests/docs/source maps.
+PLAYTEST FEEDBACK ƯU TIÊN
+- Nội tại nào cảm giác quá thường xuyên / quá vô hình.
+- Trận 1/2/3 vòng có bị dài hoặc dư tiền.
+- Reconnect có giữ đúng ghế và lượt.
+- Popup Card/News/Job/Mini Game/Nội tại có tràn chữ ở 1280×800 hoặc 960×540.
 
-Copyright © 2026 MeMeMe. All rights reserved.
+Copyright © 2026 MMM. All rights reserved.

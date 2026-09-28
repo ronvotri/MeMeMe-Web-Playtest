@@ -1,6 +1,6 @@
 {
-  "name": "MeMeMe Board Game",
-  "short_name": "MeMeMe",
+  "name": "MMM Board Game",
+  "short_name": "MMM",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",
