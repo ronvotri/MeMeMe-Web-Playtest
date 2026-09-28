@@ -2,14 +2,14 @@ MeMeMe OUTLIER REPLAY PACK 0.1.71
 Roguelike Lap Shuffle intentionally consumes HOST RNG and changes later tile outcomes after the first finisher crosses each lap.
 Historical 0.1.63.4 fingerprints remain in tests/outlier-replay-0634.ts and are not rewritten.
 seed=611102 reason=0.1.71-roguelike-lap-shuffle-longest-match
-checksum=70355e64
+checksum=6714251a
 turns=94 commands=146 submitted=129 hostAuto=17
-moneyTotal=1585 spread=158
+moneyTotal=1572 spread=158
 movement=78 release=21 cards=14 news=12
-mini=12 miniResolved=12 miniPayout=555
+mini=12 miniResolved=12 miniPayout=542
 jobs=4 lottery=1/40B$
 finishIds=3,2,1,0
-finalMoney=385,330,488,382
+finalMoney=372,330,488,382
 finishPlaces=4,3,2,1
 seed=611112 reason=0.1.71-roguelike-lap-shuffle-largest-money-spread
 checksum=143e052b
