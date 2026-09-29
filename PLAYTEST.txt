@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.32 — RC UI DENSITY POLISH + HEADER RHYTHM
+MMM PLAYTEST 0.1.70.4.33 — RC UX SIMPLIFY
 
 QUICK START — WINDOWS
 1) Giải nén file ZIP playtest.
@@ -20,7 +20,9 @@ NHÂN VẬT & NỘI TẠI
 - Tất cả roll nội tại do HOST/replay RNG quyết định. Không có client Math.random().
 
 MINI GAME
-- M17: BA CỬA.
+- M17: BA CỬA. D6 chọn cửa sống; không ai/tất cả cùng trúng thì chơi lại.
+- M17 nếu nhiều người cùng bị loại một lượt: chỉ nhóm đó OẲN TÙ XÌ để xếp hạng. Không tính thời gian chọn.
+- Luật Mini Game chỉ hiện một lần ở đầu; trong lúc chơi UI chỉ giữ tên game/trạng thái cần thiết.
 - M26: PHAO ĐƠN.
 - M35: CẮT TOP XÚC XẮC.
 - M44: ĐUA 3 CHẶNG.
