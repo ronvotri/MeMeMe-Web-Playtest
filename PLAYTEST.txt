@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.33 — RC UX SIMPLIFY
+MMM PLAYTEST 0.1.70.4.34 — CH-14 MATCH RECAP
 
 QUICK START — WINDOWS
 1) Giải nén file ZIP playtest.
@@ -9,7 +9,7 @@ QUICK START — WINDOWS
 6) Chỉ dùng START_PLAYTEST.bat.
 
 FLOW CHUẨN
-Menu → Setup → Chọn nhân vật → Chọn 1/2/3 vòng → Roll For Order → Trận → Podium → Rematch/Lobby.
+Menu → Setup → Chọn nhân vật → Chọn 1/2/3 vòng → Roll For Order → Trận → Podium → Xem Tổng Kết → Rematch/Lobby.
 
 NHÂN VẬT & NỘI TẠI
 - KHÓC NHÈ / ĐƯỢC DỖ: 40% khi mất ít nhất 20B$, hoàn 10B$.
@@ -27,6 +27,13 @@ MINI GAME
 - M35: CẮT TOP XÚC XẮC.
 - M44: ĐUA 3 CHẶNG.
 - Khi còn đúng 2 người, dùng OẲN TÙ XÌ để phân hạng 1–2 theo luật hiện tại.
+
+MATCH RECAP — CH-14
+- Sau Podium, chọn ✨ XEM TỔNG KẾT để xem câu chuyện của ván.
+- Mỗi P1–P4 có hồ sơ: B$ cuối, nghề, Mini Game, Lá Bài, TIN TỨC, Đồn/Bệnh viện, nội tại, Xổ số và lương.
+- Danh hiệu recap chỉ là presentation vui, không cộng/trừ B$ và không đổi thứ hạng.
+- Timeline chọn tối đa 8 khoảnh khắc trực tiếp từ authoritative event log.
+- Steam Deck: D-pad đổi người, A chọn, B đóng recap.
 
 MATCH LENGTH & ECONOMY
 - Chọn 1 / 2 / 3 vòng cho mỗi người.
