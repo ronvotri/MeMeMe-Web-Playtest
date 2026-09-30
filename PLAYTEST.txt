@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.35 — CH-14.1 RUNTIME POLISH
+MMM PLAYTEST 0.1.70.4.36 — CH-14.2 MINI GAME FLOW
 
 QUICK START — WINDOWS
 1) Giải nén file ZIP playtest.
@@ -58,6 +58,13 @@ RUNTIME POLISH — CH-14.1
 - Space/Enter là gameplay interact/confirm; Space không được mở Settings vì stale DOM focus.
 - Header LÁ BÀI và TIN TỨC dùng cùng một vertical-center rule, không chạm stroke.
 - Các surface bên trong Mini Game dùng shared rounded-corner language; backdrop toàn màn hình vẫn là lớp phẳng.
+
+MINI GAME FLOW — CH-14.2
+- Job Hub bỏ dòng “Đổ xúc xắc để chọn nghề”; nút D6 đã đủ rõ.
+- Mini Game có ít nhất 1 người thật: bảng luật đứng yên đến khi người chơi Enter / Space / A / chạm TIẾP.
+- Mini Game chỉ có CPU: bỏ qua bảng luật và vào vòng chơi ngay.
+- Passive Character không hiển thị tỷ lệ % hay roll; đây là thông số ẩn, chỉ giữ trong authority/replay.
+- Ba Cửa, Phao Đơn, Cắt Top và Đua 3 Chặng dùng layout ngang: người chơi/trạng thái bên trái, kết quả bên phải, không nhồi thành cột dài phải cuộn.
 
 JOB & PRESENTATION
 - Nếu Job xuất hiện giữa movement, xử lý Job xong tiếp tục số pip còn lại.
