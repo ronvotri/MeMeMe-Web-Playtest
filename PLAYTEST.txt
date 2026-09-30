@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.34 — CH-14 MATCH RECAP
+MMM PLAYTEST 0.1.70.4.35 — CH-14.1 RUNTIME POLISH
 
 QUICK START — WINDOWS
 1) Giải nén file ZIP playtest.
@@ -52,6 +52,12 @@ JAIL / HOSPITAL
 - Release D6 chỉ dùng để thoát giữ.
 - Sau đó dùng fresh movement D6 trong cùng lượt.
 - J1/J2/J3 và H1/H2/H3 = -20B$ khi đáp xuống.
+
+RUNTIME POLISH — CH-14.1
+- Spotlight/highlight bám actor đang thực thi presentation; không nhảy sang lượt kế tiếp trước khi animation/effect hiện tại kết thúc.
+- Space/Enter là gameplay interact/confirm; Space không được mở Settings vì stale DOM focus.
+- Header LÁ BÀI và TIN TỨC dùng cùng một vertical-center rule, không chạm stroke.
+- Các surface bên trong Mini Game dùng shared rounded-corner language; backdrop toàn màn hình vẫn là lớp phẳng.
 
 JOB & PRESENTATION
 - Nếu Job xuất hiện giữa movement, xử lý Job xong tiếp tục số pip còn lại.
