@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.37 — CH-15 PUBLIC ONLINE — CH-15 PUBLIC
+MMM PLAYTEST 0.1.70.4.38 — CH-16 MINI GAME OVERHAUL — PUBLIC ONLINE
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -28,14 +28,13 @@ NHÂN VẬT & NỘI TẠI
 - SECRET BABY / BÉ CƯNG CỦA VŨ TRỤ: 60% khi mất ít nhất 20B$, hoàn 15B$.
 - Tất cả roll nội tại do HOST/replay RNG quyết định. Không có client Math.random().
 
-MINI GAME
-- M17: BA CỬA. D6 chọn cửa sống; không ai/tất cả cùng trúng thì chơi lại.
-- M17 nếu nhiều người cùng bị loại một lượt: chỉ nhóm đó OẲN TÙ XÌ để xếp hạng. Không tính thời gian chọn.
-- Luật Mini Game chỉ hiện một lần ở đầu; trong lúc chơi UI chỉ giữ tên game/trạng thái cần thiết.
-- M26: PHAO ĐƠN.
-- M35: CẮT TOP XÚC XẮC.
-- M44: ĐUA 3 CHẶNG.
-- Khi còn đúng 2 người, dùng OẲN TÙ XÌ để phân hạng 1–2 theo luật hiện tại.
+MINI GAME — CH-16
+- M09 PHỐ ĐÔNG NGƯỜI: chọn kín NGỬA/SẤP; phe ít người hơn bị loại. M09 giữ OẲN TÙ XÌ khi còn 2 người.
+- M17 KÈO ALL-IN: nhận D6 đầu rồi chọn CHỐT hoặc ALL-IN. ALL-IN đổ thêm 1 D6; tổng vượt 9 = CHÁY = 0 điểm. Hòa điểm mới dùng D6 phân hạng.
+- M26 PHAO ĐƠN: chọn kín Phao 1/2/3; chỉ phao có đúng 1 người mới nổi. Người chìm cùng lượt dùng D6 tie-break công bằng, không xếp theo số ghế. Còn 2 người dùng D6 cứu hộ.
+- M35 TOP 2 HOẶC VỀ KHÔNG: tất cả đổ D6, cắt Top 2; hòa ranh Top thì chỉ nhóm hòa đổ lại. Top 2 chốt hạng bằng D6, không OẲN TÙ XÌ.
+- M44 NƯỚC RÚT CUỐI VÒNG: chạy 3 chặng D6. Mỗi người có đúng 1 quyền REROLL cho cả cuộc đua; dùng sau khi thấy điểm và phải nhận điểm mới. Cộng tổng 3 chặng để xếp hạng; hòa tổng mới chạy D6 hiệp phụ.
+- Luật Mini Game hiện một lần ở đầu theo format MỤC TIÊU / CHƠI / HÒA hoặc RỦI RO / THƯỞNG.
 
 MATCH RECAP — CH-14
 - Sau Podium, chọn ✨ XEM TỔNG KẾT để xem câu chuyện của ván.
@@ -73,7 +72,7 @@ MINI GAME FLOW — CH-14.2
 - Mini Game có ít nhất 1 người thật: bảng luật đứng yên đến khi người chơi Enter / Space / A / chạm TIẾP.
 - Mini Game chỉ có CPU: bỏ qua bảng luật và vào vòng chơi ngay.
 - Passive Character không hiển thị tỷ lệ % hay roll; đây là thông số ẩn, chỉ giữ trong authority/replay.
-- Ba Cửa, Phao Đơn, Cắt Top và Đua 3 Chặng dùng layout ngang: người chơi/trạng thái bên trái, kết quả bên phải, không nhồi thành cột dài phải cuộn.
+- Kèo All-In, Phao Đơn, Cắt Top và Đua 3 Chặng dùng layout ngang: người chơi/trạng thái bên trái, kết quả bên phải, không nhồi thành cột dài phải cuộn.
 
 JOB & PRESENTATION
 - Nếu Job xuất hiện giữa movement, xử lý Job xong tiếp tục số pip còn lại.
