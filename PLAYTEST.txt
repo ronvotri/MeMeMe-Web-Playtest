@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.43 — CH-17.4 MODAL REFRESH — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.44 — CH-17.5 BOARD + RECAP REFRESH — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -23,6 +23,7 @@ VISUAL REFRESH — CH-17
 - Background menu/setup có illustration-shape presentation mới; không dùng asset hay UI copy trực tiếp từ game tham chiếu.
 - Roll For Order mới có 4 card kiểu sticker, active-player highlight, status banner và preview thứ tự dùng phần trống bên dưới.
 - HUD trong trận dùng card sticker 4 góc, money pill vàng, career/status lane kem và active-turn ribbon; nút xúc xắc/turn chrome dùng material CH-17.
+- CH-17.5: đường đi trên Board có ribbon/shadow; tile dùng rounded toy-card + gloss; Match Recap dùng paper-card, rounded player tabs và nút đóng nổi.
 - Đây là presentation-only pass: gameplay, B$, RNG, Host authority và Worker online không đổi.
 
 FLOW CHUẨN
