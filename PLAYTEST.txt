@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.52 — CH-17.12 SPECIAL REACTION REFRESH — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.53 — CH-17.13 PRESENTATION FEEDBACK REFRESH — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -31,6 +31,7 @@ VISUAL REFRESH — CH-17
 - CH-17.10: Group Media online (khung video/avatar, label, CAMERA/MIC) dùng chung cozy toy-card material; WebRTC/signaling/opt-in behavior không đổi.
 - CH-17.11: Branch Picker, Tactical Choice, Target Picker, Card Hand và Full Map Review dùng chung paper/sticker/toy-card material; lựa chọn, target và map topology không đổi.
 - CH-17.12: Reaction bubble và banner Jail/Hospital dùng paper/sticker material; timing phản ứng, luật thoát và special-location authority không đổi.
+- CH-17.13: Popup xúc xắc, landing/ready-bonus, generic cinematic fallback, nút TIẾP/BỎ QUA, floating B$, action line và rarity badge dùng toy-paper/cozy material; timing, event queue, B$, RNG và input authority không đổi.
 - Đây là presentation-only pass: gameplay, B$, RNG, Host authority và Worker online không đổi.
 
 FLOW CHUẨN
