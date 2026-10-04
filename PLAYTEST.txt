@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.38 — CH-16 MINI GAME OVERHAUL — PUBLIC ONLINE
+MMM PLAYTEST 0.1.70.4.39 — CH-16.1 QUICK MINI GAME + LANDING FIX — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -18,7 +18,10 @@ QUICK START — WINDOWS
 6) Chỉ dùng START_PLAYTEST.bat.
 
 FLOW CHUẨN
-Menu → Setup → Chọn nhân vật → Chọn 1/2/3 vòng → Roll For Order → Trận → Podium → Xem Tổng Kết → Rematch/Lobby.
+Splash → BOARD GAME / MINI GAME.
+- BOARD GAME → Menu chơi nhanh / local / online → Setup → Chọn nhân vật → Chọn 1/2/3 vòng → Roll For Order → Trận → Podium → Xem Tổng Kết → Rematch/Lobby.
+- MINI GAME → Chọn 1 trong 5 game + số người/CPU → chơi ngay → Chơi lại / Đổi Mini Game / Menu chính.
+- B$ của ô đến chỉ hiện thay đổi sau khi token đã tới ô và presentation của ô bắt đầu; không hé kết quả tiền giữa lúc đang chạy.
 
 NHÂN VẬT & NỘI TẠI
 - KHÓC NHÈ / ĐƯỢC DỖ: 40% khi mất ít nhất 20B$, hoàn 10B$.
