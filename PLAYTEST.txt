@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.40 — CH-17 VISUAL REFRESH — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.43 — CH-17.4 MODAL REFRESH — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -19,8 +19,10 @@ QUICK START — WINDOWS
 
 VISUAL REFRESH — CH-17
 - Art direction mới: cozy/chibi town UI, pastel ấm, panel kem–đào, viền cacao dày, icon bubble, nút nổi nhiều lớp.
-- Main Menu, Board Lobby, Mini Game Select, Setup, Character Select và Rule Select bắt đầu dùng visual language mới.
+- Main Menu, Board Lobby, Mini Game Select, Setup, Character Select, Rule Select và Roll For Order dùng visual language mới.
 - Background menu/setup có illustration-shape presentation mới; không dùng asset hay UI copy trực tiếp từ game tham chiếu.
+- Roll For Order mới có 4 card kiểu sticker, active-player highlight, status banner và preview thứ tự dùng phần trống bên dưới.
+- HUD trong trận dùng card sticker 4 góc, money pill vàng, career/status lane kem và active-turn ribbon; nút xúc xắc/turn chrome dùng material CH-17.
 - Đây là presentation-only pass: gameplay, B$, RNG, Host authority và Worker online không đổi.
 
 FLOW CHUẨN
