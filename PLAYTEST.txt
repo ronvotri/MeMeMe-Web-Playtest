@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.48 — CH-17.9 FACE TOOLS REFRESH — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.49 — CH-17.10 GROUP MEDIA REFRESH — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -28,6 +28,7 @@ VISUAL REFRESH — CH-17
 - CH-17.7: CHƠI LẠI / VỀ LOBBY và banner hoàn thành vòng dùng chung glossy toy-button/paper material; shell overlay lifecycle và authority không đổi.
 - CH-17.8: Splash, Settings, BGM HUD và Online Room dùng chung cozy toy-town material; audio, fullscreen và online room behavior không đổi.
 - CH-17.9: Face Editor, nút upload/chụp ảnh và Camera Capture dùng chung toy-card material; crop/zoom/rotate/getUserMedia behavior không đổi.
+- CH-17.10: Group Media online (khung video/avatar, label, CAMERA/MIC) dùng chung cozy toy-card material; WebRTC/signaling/opt-in behavior không đổi.
 - Đây là presentation-only pass: gameplay, B$, RNG, Host authority và Worker online không đổi.
 
 FLOW CHUẨN
