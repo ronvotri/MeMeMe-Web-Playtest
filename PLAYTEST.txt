@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.46 — CH-17.7 END CONTROLS REFRESH — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.47 — CH-17.8 SHELL REFRESH — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -26,6 +26,7 @@ VISUAL REFRESH — CH-17
 - CH-17.5: đường đi trên Board có ribbon/shadow; tile dùng rounded toy-card + gloss; Match Recap dùng paper-card, rounded player tabs và nút đóng nổi.
 - CH-17.6: finish transition, Podium và nút Xem Tổng Kết dùng chung paper/sticker material; ranking, tie, reveal cadence và result input gate không đổi.
 - CH-17.7: CHƠI LẠI / VỀ LOBBY và banner hoàn thành vòng dùng chung glossy toy-button/paper material; shell overlay lifecycle và authority không đổi.
+- CH-17.8: Splash, Settings, BGM HUD và Online Room dùng chung cozy toy-town material; audio, fullscreen và online room behavior không đổi.
 - Đây là presentation-only pass: gameplay, B$, RNG, Host authority và Worker online không đổi.
 
 FLOW CHUẨN
