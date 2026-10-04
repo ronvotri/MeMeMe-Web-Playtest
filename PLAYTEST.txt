@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.56 — CH-18.2 CONTEXT PORTRAITS — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.57 — CH-18.3 PODIUM PORTRAITS — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -16,6 +16,11 @@ QUICK START — WINDOWS
 4) GIỮ cửa sổ terminal launcher mở trong lúc chơi.
 5) Không mở index.html trực tiếp. Nếu thanh địa chỉ bắt đầu bằng file:/// thì hãy đóng tab và chạy START_PLAYTEST.bat.
 6) Chỉ dùng START_PLAYTEST.bat.
+
+CHARACTER PODIUM — CH-18.3
+- Podium ưu tiên ảnh mặt người chơi; nếu không có, dùng portrait canon của Character với biểu cảm theo hạng: hạng 1 vui, hạng cuối quạu, hạng giữa trung tính.
+- Secret Baby sau reveal cũng dùng đúng portrait canon trên podium.
+- Presentation-only: thứ hạng/B$/tie/reveal timing không đổi.
 
 CHARACTER PORTRAITS — CH-18.2
 - Reaction bubble/Card/News/landing ưu tiên ảnh mặt người chơi nếu có; nếu không có thì dùng portrait canon đúng Character + biểu cảm neutral/happy/angry.
