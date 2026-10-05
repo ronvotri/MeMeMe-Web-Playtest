@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.62 — CH-18.8 LIVE FACE SOCKET — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.63 — CH-18.9 HQ CHARACTER TOKENS — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -16,6 +16,13 @@ QUICK START — WINDOWS
 4) GIỮ cửa sổ terminal launcher mở trong lúc chơi.
 5) Không mở index.html trực tiếp. Nếu thanh địa chỉ bắt đầu bằng file:/// thì hãy đóng tab và chạy START_PLAYTEST.bat.
 6) Chỉ dùng START_PLAYTEST.bat.
+
+HQ CHARACTER TOKEN — CH-18.9
+- Walk sheet 48px/frame không còn được phóng thẳng lên board. Runtime tạo atlas 4x: 192px/frame, tổng 1536×960, xử lý từng frame riêng rồi downsample bằng LINEAR.
+- Character board giữ display ~104px và bỏ inherited token scale 0.82, nên không còn bị co nhỏ ngoài ý muốn.
+- Halo tròn cũ quanh thân bị ẩn. Active indicator mới là ellipse 84×24 nằm dưới chân Character, ở layer thấp hơn body.
+- P badge vẫn nằm ngoài silhouette; walk 8 frame + flip trái/phải + face socket/live face giữ nguyên.
+- Đây là HQ remaster từ nguồn hiện có, không được mô tả là redraw thêm chi tiết. Production redraw thật sẽ thay atlas nguồn sau mà không đổi runtime contract.
 
 LIVE CHARACTER FACE — CH-18.8
 - Online Group Camera đã bật sẽ được tái sử dụng cho Character face socket; không xin thêm quyền camera lần hai.
