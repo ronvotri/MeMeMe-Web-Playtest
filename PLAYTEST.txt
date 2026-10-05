@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.60 — CH-18.6 BOARD TOKEN QUALITY — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.61 — CH-18.7 BOARD FACE SOCKET — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -16,6 +16,14 @@ QUICK START — WINDOWS
 4) GIỮ cửa sổ terminal launcher mở trong lúc chơi.
 5) Không mở index.html trực tiếp. Nếu thanh địa chỉ bắt đầu bằng file:/// thì hãy đóng tab và chạy START_PLAYTEST.bat.
 6) Chỉ dùng START_PLAYTEST.bat.
+
+CHARACTER FACE SOCKET — CH-18.7
+- Khôi phục đúng milestone CH-02G cũ lên board: KHÓC NHÈ / neutral là pose đầu tiên có body-back + non-circular player face + soft mask + foreground thật.
+- Không upload/chụp mặt: giữ nguyên Character mặc định.
+- Có neutral face source + chọn KHÓC NHÈ: board tạo composite runtime từ source 512px, giữ tỉ lệ khuôn mặt bằng socket CH-02F, rồi bob/flip theo hướng di chuyển.
+- Trong proof này, personalized KHÓC NHÈ ưu tiên layered static composite hơn walk-strip để không dán avatar tròn lên đầu Character.
+- Các Character/pose khác vẫn giữ default art cho đến khi có layered export thật; không đoán socket.
+- Camera hiện tại vẫn là capture 1/3 biểu cảm, chưa phải live expression tracking liên tục.
 
 CHARACTER BOARD TOKEN — CH-18.6
 - Board Character tăng từ 62px lên 96px (xấp xỉ 1.55x) để đọc rõ hơn trên bàn cờ.
