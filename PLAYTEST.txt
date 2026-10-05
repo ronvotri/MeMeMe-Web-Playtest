@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.63 — CH-18.9 HQ CHARACTER TOKENS — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.64 — CH-18.10 PERSISTENT HQ ATLAS — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -16,6 +16,12 @@ QUICK START — WINDOWS
 4) GIỮ cửa sổ terminal launcher mở trong lúc chơi.
 5) Không mở index.html trực tiếp. Nếu thanh địa chỉ bắt đầu bằng file:/// thì hãy đóng tab và chạy START_PLAYTEST.bat.
 6) Chỉ dùng START_PLAYTEST.bat.
+
+HQ CHARACTER ASSET — CH-18.10
+- Atlas x4 giờ là asset thật được ship cùng build: 1536×960, 192×192/frame, 8 frame × 5 Character; scene không còn dựng atlas lớn bằng canvas mỗi lần vào board.
+- Mỗi frame được cô lập trong asset x4 nên không lấy màu từ frame kế bên; runtime chỉ downsample asset lớn xuống token ~104px.
+- Active ring siết còn 78×18 và hạ tâm xuống Y=31, nằm sau/bên dưới bàn chân thay vì vòng quanh thân.
+- Đây vẫn là remaster từ walk source hiện có; KHÓC NHÈ production sheet high-res đã được tìm lại trên Drive và sẽ là nguồn redraw chuẩn cho phase production-art tiếp theo.
 
 HQ CHARACTER TOKEN — CH-18.9
 - Walk sheet 48px/frame không còn được phóng thẳng lên board. Runtime tạo atlas 4x: 192px/frame, tổng 1536×960, xử lý từng frame riêng rồi downsample bằng LINEAR.
