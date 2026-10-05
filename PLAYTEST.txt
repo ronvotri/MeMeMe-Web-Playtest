@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.61 — CH-18.7 BOARD FACE SOCKET — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.62 — CH-18.8 LIVE FACE SOCKET — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -16,6 +16,14 @@ QUICK START — WINDOWS
 4) GIỮ cửa sổ terminal launcher mở trong lúc chơi.
 5) Không mở index.html trực tiếp. Nếu thanh địa chỉ bắt đầu bằng file:/// thì hãy đóng tab và chạy START_PLAYTEST.bat.
 6) Chỉ dùng START_PLAYTEST.bat.
+
+LIVE CHARACTER FACE — CH-18.8
+- Online Group Camera đã bật sẽ được tái sử dụng cho Character face socket; không xin thêm quyền camera lần hai.
+- Thứ tự fallback: CAMERA ON live video → ảnh neutral đã upload/chụp → Character mặc định.
+- Live video được center-crop về vùng vuông trước khi qua socket CH-02F, rồi mask mềm + foreground CH-02G; không hard-circle.
+- Live proof hiện chỉ áp dụng KHÓC NHÈ neutral vì đây là layered pose duy nhất đã có asset/socket thật.
+- Khoảng refresh live face ~15 fps để giữ UI nhẹ; movement/Host/RNG/B$ không đổi.
+- Đây là live video trong Character, chưa phải AI phân loại happy/angry/panic.
 
 CHARACTER FACE SOCKET — CH-18.7
 - Khôi phục đúng milestone CH-02G cũ lên board: KHÓC NHÈ / neutral là pose đầu tiên có body-back + non-circular player face + soft mask + foreground thật.
