@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.65 — CH-18.11 KHÓC NHÈ PRODUCTION WALK — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.68 — CH-18.14 CAU CÓ CANON LOCK — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,31 @@ MMM PLAYTEST 0.1.70.4.65 — CH-18.11 KHÓC NHÈ PRODUCTION WALK — GITHUB PLAY
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+CAU CÓ CANON LOCK — CH-18.14
+- Repo authority xác nhận CAU CÓ: nam 40–50, sharp-tailored, upright-angular, chỉnh tề/sắc cạnh.
+- Visual anchors bắt buộc: tóc muối tiêu vuốt gọn, kính chữ nhật gọng vàng, ria + râu cằm ngắn, sơ mi trắng dài tay, cà vạt nâu họa tiết vương miện, suspenders nâu, áo vest xanh olive pinstripe khoác vai, quần tây nâu cạp cao, loafer nâu hardware vàng, cặp da công sở, đồng hồ/phụ kiện kim loại và nhẫn xanh.
+- Cấm drift thành áo ba lỗ/short/sandal/casual beach-uncle, bỏ kính/cà vạt/áo khoác, hoặc đổi tuổi/giới tính/silhouette.
+- CAU CÓ vẫn fallback-only; chưa có productionAssetPath cho tới khi strip high-res thật khớp concept.
+- Layer order được khóa: active foot ring ở index 0, walk/static/live Character body ở trên ring. Live face không được chui xuống dưới ring.
+- Idle breathing CH-18.13 giữ nguyên; ring không thở theo Character.
+- Gameplay/Host/RNG/B$/movement authority không đổi. Cloudflare Worker không deploy/update.
+
+CHARACTER IDLE — CH-18.13
+- Khi Character đứng yên trên Board, sprite không còn đóng băng: có nhịp thở nhẹ ~2.2 giây bằng scale/rise rất nhỏ, giữ chân gần như cố định.
+- Idle breathing áp dụng cho walk sprite của toàn cast và cả KHÓC NHÈ face-socket/live-face composite.
+- Khi bắt đầu di chuyển, idle transform được reset trước rồi mới chạy cadence walk 8 frame; khi dừng lại mới quay về breathing.
+- Active ring vẫn 78×18 tại Y=31, nằm dưới chân và không bị kéo theo nhịp thở.
+- CAU CÓ đã re-audit theo canon repo: nam 40–50, chỉnh tề/sắc cạnh, silhouette thẳng-góc cạnh. Các bản thử sai outfit bị loại, runtime vẫn fallback-only đến khi có strip high-res đúng concept.
+- Gameplay/Host/RNG/B$/movement authority không đổi. Cloudflare Worker không deploy/update.
+
+PRODUCTION SOURCE LOCK — CH-18.12
+- Chỉ KHÓC NHÈ hiện được phép dùng production walk strip thật 1536×192 (8 frame × 192×192).
+- CAU CÓ / LO LẮNG / TĂNG ĐỘNG / SECRET BABY vẫn fallback-only cho tới khi có strip high-res thật đúng concept canon; tuyệt đối không nâng 48px rồi gắn nhãn production.
+- Production admission được khóa bằng manifest + CI gate; pending Character không có productionAssetPath.
+- Active ring giữ 78×18 tại Y=31 dưới chân; cadence 8 frame, flip trái/phải và P badge không đổi.
+- Face/live camera contract giữ nguyên; chỉ KHÓC NHÈ neutral có layered socket proof thật.
+- Gameplay/Host/RNG/B$/movement/passive không đổi. Cloudflare Worker không deploy/update.
 
 QUICK START — WINDOWS
 1) Giải nén file ZIP playtest.
