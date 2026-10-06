@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.72 — CH-18.18 TĂNG ĐỘNG PRODUCTION WALK — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.73 — CH-18.19 SECRET BABY PRODUCTION CRAWL — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,18 @@ MMM PLAYTEST 0.1.70.4.72 — CH-18.18 TĂNG ĐỘNG PRODUCTION WALK — GITHUB P
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+SECRET BABY PRODUCTION CRAWL — CH-18.19
+- CH-18.19 được build lại sau khi rollback bản SECRET BABY sai concept.
+- Visual authority chính là asset chuẩn đang có trong repo/build: public/assets/characters/ch181/portrait-atlas-secret-baby.webp + row 4 của public/assets/characters/ch181/walk-atlas.webp.
+- Runtime asset mới: public/assets/characters/ch181/walk-secret-baby-production-x4.png — 1536×192, 8 frame × 192×192, 363723 bytes, SHA-256 5b00136a4077703e9ebe3d7116f243e1330aadba04fd9b4acf94035ca4125a0c.
+- Canon giữ infant trọc đầu, crown nhỏ, pacifier vàng, cape đỏ kéo phía sau, thân rất thấp sát đất và biểu cảm bossy.
+- Cấm drift thành toddler/child, dáng đứng đi như starter, tóc người lớn, staff quá khổ hoặc phụ kiện tự chế không có trong repo-standard.
+- Runtime dùng SECRET_BABY_PRODUCTION_CRAWL_KEY_CH1819; 8 frame là crawl phases.
+- RANDOM-only giữ nguyên: directSelectable=false, 5% HOST-authoritative, tối đa một Secret Baby mỗi RANDOM batch.
+- Idle breathing, flip trái/phải, active ring 78×18 Y=31 dưới Character và face socket/live camera contract giữ nguyên.
+- Toàn bộ 5 Character slot hiện đã có genuine production movement source.
+- Cloudflare Worker không deploy/update.
 
 TĂNG ĐỘNG PRODUCTION WALK — CH-18.18
 - TĂNG ĐỘNG đã có production walk strip runtime thật: 1536×192, 8 frame × 192×192, nền trong suốt.
