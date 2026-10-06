@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.73 — CH-18.19 SECRET BABY PRODUCTION CRAWL — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.74 — CH-18.20 CHARACTER ANIMATION REPAIR — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,17 @@ MMM PLAYTEST 0.1.70.4.73 — CH-18.19 SECRET BABY PRODUCTION CRAWL — GITHUB PL
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+CHARACTER ANIMATION REPAIR — CH-18.20
+- CAU CÓ production PNG cũ bị corrupt IDAT/CRC dù header + dimension vẫn đúng; file đó đã bị thay toàn bộ, không vá tiếp.
+- CAU CÓ mới là binary trực tiếp 1536×192 / 8×192, 239574 bytes, SHA-256 a93b1b7b642f9a4da6f32f8ad7e52a80f9cbb9e828f1bebeb0544dd5012a9504.
+- Bỏ hẳn 4 base64 chunk CAU CÓ và bỏ materializer tương ứng để không tái tạo file corrupt.
+- LO LẮNG alpha-clean: 85924 bytes, SHA-256 dc679a55d7a0e6e28e3923e3023f2129ce43b9eda499bc134b75fd8a5a249566.
+- TĂNG ĐỘNG alpha-clean: 277818 bytes, SHA-256 b5503376f678f6128eeb75f22ec88278a52be72a86b8ebe8fc27fc3ddcf81352.
+- Cả 3 strip giữ baseline Y≈180 và được QA ở token scale 104×104; active ring vẫn là object riêng bên dưới.
+- CI CH-18.20 giờ validate CRC từng PNG chunk + inflate RGBA + kiểm frame separation/baseline, nên file corrupt kiểu cũ sẽ fail ngay.
+- SECRET BABY không đổi trong slice này.
+- Face socket/live camera, idle breathing, gameplay authority và Cloudflare Worker giữ nguyên.
 
 SECRET BABY PRODUCTION CRAWL — CH-18.19
 - CH-18.19 được build lại sau khi rollback bản SECRET BABY sai concept.
