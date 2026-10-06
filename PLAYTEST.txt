@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.69 — CH-18.15 CAU CÓ SOURCE PIN — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.71 — CH-18.17 LO LẮNG PRODUCTION WALK — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,27 @@ MMM PLAYTEST 0.1.70.4.69 — CH-18.15 CAU CÓ SOURCE PIN — GITHUB PLAYTEST
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+LO LẮNG PRODUCTION WALK — CH-18.17
+- LO LẮNG đã có production walk strip runtime thật: 1536×192, 8 frame × 192×192, nền trong suốt.
+- Concept authority gốc đã pin tại docs/character-production/canon/lolang.webp (1122×1402, 212632 bytes, SHA-256 e1a6ccd8e7586584949b34fb9a227ba2cdfc4f91bb0c88bcce880a2eb8ada964).
+- Runtime asset: public/assets/characters/ch181/walk-lo-lang-production-x4.png (36742 bytes, SHA-256 c112d1ced88c11d41bd59a71cb2bd1683655803e827912c5079cd103f3da0497).
+- Canon giữ nam 28–35, tóc nâu rối, kính lớn, áo teal planner-core, quần be rộng, sneaker xanh/kem và silhouette organizer quá tải với planner/checklist/bút/phone/chai nước/móc khóa.
+- Runtime LO LẮNG dùng ANXIOUS_PRODUCTION_WALK_KEY_CH1817; không còn dùng fallback row 48px.
+- Idle breathing ~2.2s, cadence 8 frame, flip trái/phải, active ring 78×18 Y=31 dưới chân đều giữ nguyên.
+- TĂNG ĐỘNG / SECRET BABY vẫn fallback-only cho tới khi có high-res production strip đúng canon.
+- CH-18.16 CAU CÓ fingerprint đã sửa metadata đúng: 32472 bytes, SHA-256 e6aac908cf41d99e6e806b4c8aa206a052fac4f67142277b1205780fc760544b.
+- Face socket/live camera contract giữ nguyên. Cloudflare Worker không deploy/update.
+
+CAU CÓ PRODUCTION WALK — CH-18.16
+- CAU CÓ đã có production walk strip runtime thật: 1536×192, 8 frame × 192×192, nền trong suốt.
+- Asset được materialize từ source chunks trong repo và hash-lock SHA-256 e6aac908cf41d99e6e806b4c8aa206a052fac4f67142277b1205780fc760544b.
+- Runtime CAU CÓ giờ dùng production strip riêng; không còn dùng fallback row 48px/HQ remaster.
+- Canon authority vẫn là docs/character-production/canon/cauco.webp; production strip giữ nam 40–50, kính vàng, tóc muối tiêu, ria+râu cằm, sơ mi trắng, suspenders/cà vạt, vest olive khoác vai, quần nâu, loafer và satchel công sở.
+- Idle breathing ~2.2s giữ nguyên; khi di chuyển reset idle transform rồi chạy cadence 8 frame.
+- Active ring vẫn 78×18 tại Y=31 và nằm dưới Character; ring không nằm trong PNG production.
+- LO LẮNG / TĂNG ĐỘNG / SECRET BABY vẫn fallback-only cho tới khi có high-res production strip đúng canon.
+- Face socket/live camera contract giữ nguyên; Cloudflare Worker không deploy/update.
 
 CAU CÓ SOURCE PIN — CH-18.15
 - Concept authority gốc của CAU CÓ đã được pin trực tiếp vào repo tại docs/character-production/canon/cauco.webp.
