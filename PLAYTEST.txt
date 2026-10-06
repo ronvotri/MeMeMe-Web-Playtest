@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.68 — CH-18.14 CAU CÓ CANON LOCK — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.69 — CH-18.15 CAU CÓ SOURCE PIN — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,15 @@ MMM PLAYTEST 0.1.70.4.68 — CH-18.14 CAU CÓ CANON LOCK — GITHUB PLAYTEST
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+CAU CÓ SOURCE PIN — CH-18.15
+- Concept authority gốc của CAU CÓ đã được pin trực tiếp vào repo tại docs/character-production/canon/cauco.webp.
+- CI khóa đúng file bằng SHA-256 f75435579c1647b07b1a88b3ced312c624c761c54a8ec87c335f5f6093db637e (1122×1402, 168340 bytes), nên future strip phải đối chiếu đúng concept này.
+- Visual anchors canon: nam 40–50, tóc muối tiêu dày vuốt ngược, kính chữ nhật gọng vàng, ria + râu cằm ngắn, sơ mi trắng dài tay, suspenders nâu, cà vạt nâu họa tiết vương miện, vest olive pinstripe khoác vai, quần tây nâu cạp cao, loafer nâu đỏ hardware vàng, túi/cặp nâu họa tiết vương miện, đồng hồ vàng-đen, nhẫn đá xanh.
+- Cấm drift thành áo ba lỗ, short, sandal/flip-flop, bỏ kính/cà vạt/vest hoặc đổi tuổi/giới tính/silhouette.
+- CAU CÓ vẫn fallback-only và chưa có productionAssetPath. Authority image là QA/docs source, không được load trực tiếp thành runtime sprite.
+- Idle breathing CH-18.13 + ring/layer order CH-18.14 giữ nguyên.
+- Gameplay/Host/RNG/B$/movement authority không đổi. Cloudflare Worker không deploy/update.
 
 CAU CÓ CANON LOCK — CH-18.14
 - Repo authority xác nhận CAU CÓ: nam 40–50, sharp-tailored, upright-angular, chỉnh tề/sắc cạnh.
