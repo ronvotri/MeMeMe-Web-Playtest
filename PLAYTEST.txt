@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.71 — CH-18.17 LO LẮNG PRODUCTION WALK — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.72 — CH-18.18 TĂNG ĐỘNG PRODUCTION WALK — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,17 @@ MMM PLAYTEST 0.1.70.4.71 — CH-18.17 LO LẮNG PRODUCTION WALK — GITHUB PLAYT
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+TĂNG ĐỘNG PRODUCTION WALK — CH-18.18
+- TĂNG ĐỘNG đã có production walk strip runtime thật: 1536×192, 8 frame × 192×192, nền trong suốt.
+- Concept authority gốc đã pin tại docs/character-production/canon/tangdong.webp (1122×1402, 240936 bytes, SHA-256 8bd94dc4cb712fe00dceec59ca68deb77069e79b04d6ee4f7d5aeb4c8c84dd5f).
+- Runtime asset: public/assets/characters/ch181/walk-tang-dong-production-x4.png (310854 bytes, SHA-256 98a4ab0c84ff399ed4c846e2adafe80892125ddc7373a03d1414b5de546538c9).
+- Canon giữ nữ 18–24, tóc nâu búi đôi rối, kính màu trên đầu, headphone hồng/trắng, jacket sporty oversize vàng-hồng-xanh nhiều sticker, crop top trắng, short đen viền trắng, sneaker chunky nhiều màu, balo xanh ngọc nhiều charm và gadget.
+- Runtime TĂNG ĐỘNG dùng HYPER_PRODUCTION_WALK_KEY_CH1818; không còn dùng fallback row 48px.
+- Idle breathing ~2.2s, cadence 8 frame, flip trái/phải, active ring 78×18 Y=31 dưới chân đều giữ nguyên.
+- KHÓC NHÈ / CAU CÓ / LO LẮNG / TĂNG ĐỘNG hiện là production.
+- SECRET BABY vẫn fallback-only cho tới khi có genuine infant high-res production strip đúng canon.
+- Face socket/live camera contract giữ nguyên. Cloudflare Worker không deploy/update.
 
 LO LẮNG PRODUCTION WALK — CH-18.17
 - LO LẮNG đã có production walk strip runtime thật: 1536×192, 8 frame × 192×192, nền trong suốt.
