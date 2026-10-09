@@ -1,0 +1,30 @@
+name: Compiled playtest smoke
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compiled-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check the regression harness
+        run: node --check tests/compiled-smoke.cjs
+      - name: Verify compiled assets and release-state markers
+        run: node tests/compiled-smoke.cjs
+      - name: Syntax check the compiled runtime
+        run: |
+          set -euo pipefail
+          js_asset="$(sed -n 's/.*src="\.\/\([^"]*\.js\)".*/\1/p' index.html | head -n1)"
+          test -n "$js_asset"
+          node --check "$js_asset"
