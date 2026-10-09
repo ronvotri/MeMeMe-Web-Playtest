@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.77 — CH-18.23 CAU CÓ CANON RIG QA — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.78 — CH-18.24 CAU CÓ SILHOUETTE QA — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,14 @@ MMM PLAYTEST 0.1.70.4.77 — CH-18.23 CAU CÓ CANON RIG QA — GITHUB PLAYTEST
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+CH-18.24 CAU CÓ SILHOUETTE FIX — PREVIEW ART ONLY
+- Đối chiếu trực tiếp docs/character-production/canon/cauco.webp: túi da ở bên TRÁI người xem, không phải bên phải; túi phải nhỏ và nằm cao khỏi giày. Áo khoác xanh rêu chỉ rủ tới phía trên chân, không dài sát đế giày.
+- Rig geometry-lock: áo khoác 0.90×0.82 tại (0,55); cặp da 0.76×0.55 tại (-49,110), vẽ phía trước thân và chân. Giảm biên độ lắc để không bẹo silhouette.
+- Bổ sung gate kiểm tỷ lệ, neo vị trí và foreground layering CH-18.24.
+- CI xuất thêm runtime-ui-evidence/cau-co-rig-vs-canon-ch1824.png: concept gốc đặt cạnh rig render thực, bắt buộc duyệt bằng mắt. Bộ SVG vẫn chưa phải final canon quality, vẫn productionApproved=false.
+- Chỉ mở rig QA bằng ?cauCoRigPreview=1; bản chính vẫn dùng fallback đã có.
+- Giữ face socket/live camera, RANDOM-only của SECRET BABY, vòng active dưới chân; không deploy Cloudflare Worker.
 
 CH-18.23 CAU CÓ CANON DETAIL & JOINT ANIMATION QA
 - CI #3855 failed at browser QA: legacy halo pulse made the new SECRET BABY active ring wider than its under-foot bounds. Fixed by clamping new ring pulse to 0.94..1.08; ring stays below feet and remains keyed to current turn owner.
