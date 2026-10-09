@@ -1,4 +1,4 @@
-MMM PLAYTEST 0.1.70.4.74 — CH-18.20 CHARACTER ANIMATION REPAIR — GITHUB PLAYTEST
+MMM PLAYTEST 0.1.70.4.77 — CH-18.23 CAU CÓ CANON RIG QA — GITHUB PLAYTEST
 - Menu ONLINE kiểm tra Worker live trước khi tạo/join phòng.
 - TẠO ONLINE: Host tạo mã 4–8 ký tự hoặc để trống để server cấp mã.
 - VÀO: người chơi nhập tên + mã phòng; P2–P4 được gán ghế trống thấp nhất.
@@ -8,6 +8,21 @@ MMM PLAYTEST 0.1.70.4.74 — CH-18.20 CHARACTER ANIMATION REPAIR — GITHUB PLAY
 - Live Worker CI kiểm create/join/ready/start, WebSocket hai chiều, post-start reconnect và ghost-seat suppression.
 
 ONLINE LEGACY AUTHORITY
+
+CH-18.23 CAU CÓ CANON DETAIL & JOINT ANIMATION QA
+- CI #3855 failed at browser QA: legacy halo pulse made the new SECRET BABY active ring wider than its under-foot bounds. Fixed by clamping new ring pulse to 0.94..1.08; ring stays below feet and remains keyed to current turn owner.
+- Upgraded independent CAU CÓ rig SVG parts to better reflect the pinned male 40–50 canon: salt-pepper swept hair, stern brows, gold glasses, moustache and chin beard, pinstriped olive draped jacket/crown pin, white shirt/suspenders, crown tie, trousers, loafers, brown patterned briefcase, gold watch/emerald ring.
+- Idle now holds arms folded over torso while breathing (2.2s), then smoothly unfolds into counter-swing steps with independent hip/knee/shoulder/elbow pivots and subtle coat/briefcase lag.
+- Rig still requires ?cauCoRigPreview=1. Without the flag it stays the existing strip; revised SVG art is a QA draft and NOT yet accepted production artwork. Face socket/live camera contract unchanged.
+- No Cloudflare Worker deployment.
+
+CH-18.22 CAU CÓ PART-BASED RIG PILOT — QA ONLY
+- Tạo 18 vector part độc lập, không dùng ảnh strip cắt nền làm nguồn art rig.
+- Phaser rig có container root, torso/head pivot và upper/lower arm-leg joints; bước chân đối pha, vai phản pha, đứng thở chu kỳ 2.2s.
+- Vào đúng game Board bằng URL ?cauCoRigPreview=1 để bật bản rig thử nghiệm riêng cho CAU CÓ; không có cờ thì sprite production hiện hành vẫn được dùng.
+- Art SVG ở đây là draft tách lớp để thử chuyển động, CHƯA được duyệt khớp tuyệt đối với canon cauco.webp. Không tự chuyển sang production.
+- Sửa vòng active: suy ra visibility theo currentPlayer, không lấy visible từ legacy halo đã bị ẩn.
+- Face socket/live camera, SECRET BABY random-only, gameplay authority và Cloudflare Worker giữ nguyên.
 
 CHARACTER ANIMATION REPAIR — CH-18.20
 - CAU CÓ production PNG cũ bị corrupt IDAT/CRC dù header + dimension vẫn đúng; file đó đã bị thay toàn bộ, không vá tiếp.
