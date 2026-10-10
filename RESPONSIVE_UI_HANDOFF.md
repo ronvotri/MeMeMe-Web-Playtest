@@ -22,7 +22,7 @@ Do not re-enable a fluid DOM-only stylesheet or stretch/cover the canvas as a wo
 
 **This is an incremental DOM UI pass, not the finished multi-aspect gameplay system.**
 
-The deployed playtest repo is a *compiled export only* (index.html, CSS, bundled JS). Board rendering, camera framing, hit testing, drag/tap mapping, and modal layout authority live inside the missing source. Existing game viewport/orientation handling is preserved. The web mirror cannot safely restructure those calculations by overriding canvas width/height. Public `RVTGMzz/Mmm-BG` is game design/docs rather than the executable gameplay frontend source; `RVTGMzz/Mmm-WP` is another compiled mirror.
+The deployed playtest repo is a *compiled export only* (index.html, CSS, bundled JS). **Editable source has now been found:** `RVTGMzz/Mmm-BG` branch `mmm-mvp-0.1-dev`, including `src/main.ts`, `src/scenes/SetupScene.ts`, `src/scenes/LocalLobbyScene.ts`, `src/mobileViewport066.css`, and scene/backdrop code. Its default `main` branch only exposes design documents, which caused earlier confusion. `RVTGMzz/Mmm-WP` is another compiled mirror. The current source explicitly warns not to resize the Phaser DOM overlay separately from its canvas. The source CI can publish compiled output back to this mirror; before editing the source, review that job's cleanup so it does not unintentionally remove mirror-only QA/docs files.
 
 ## Source-side integration required for true all-aspect gameplay
 
@@ -53,6 +53,6 @@ The deployed playtest repo is a *compiled export only* (index.html, CSS, bundled
 ## Evidence / status
 
 - GitHub smoke verifies file/link and structural markers only: **not a visual regression test**.
-- Desktop/mobile live browser layout acceptance: **PENDING**.
+- Chromium viewport geometry regression now **PASS** for Lobby and Setup at 885×747, 961×910, 1280×800, 1920×1080; screenshot artifacts: [browser viewport run](https://github.com/ronvotri/MeMeMe-Web-Playtest/actions/runs/38028367206). This checks alignment/clickability and does **not** certify all gameplay or visual design.
 - Source-owned adaptive board camera/hit tests: **NOT YET IMPLEMENTED**.
 - Do not mark this feature 'complete on all devices' until the source-side criteria above pass.
