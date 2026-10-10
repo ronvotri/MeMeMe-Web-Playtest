@@ -18,22 +18,21 @@ for (const phrase of ['PRE_ROLL_ACTION', 'specialHold', 'lastRoll']) {
   assert.ok(js.includes(phrase), 'Missing expected release-state marker: ' + phrase);
 }
 
-const fluidStylesheet = 'assets/responsive-ui-v1.css';
-assert.match(html, /<link[^>]+href=["']\.\/assets\/responsive-ui-v1\.css["']/i,
-  'Responsive stylesheet must be linked after the compiled stylesheet');
-assert.ok(fs.statSync(path.join(root, fluidStylesheet)).isFile(), 'Missing responsive stylesheet');
-const fluidCss = fs.readFileSync(path.join(root, fluidStylesheet), 'utf8');
-for (const rule of ['.mememe-mode-menu', '.mememe-setup', '.quick-mini-grid',
-                     '.character-card-grid-ch02c', '@media (max-width: 600px)',
-                     '@media (max-height: 450px)']) {
-  assert.ok(fluidCss.includes(rule), 'Missing responsive coverage: ' + rule);
+// UI contract: this compiled Phaser build anchors its DOM menus to a 1280x720
+// scene and paints separate Phaser backdrops behind them. Applying viewport
+// width/media-query reflow ONLY to the DOM layer dislocates the menu cards.
+// The experimental v1 sheet remains in git for reference but must not load.
+assert.ok(!html.includes('href="./assets/responsive-ui-v1.css"'),
+  'Regressed: incompatible DOM-only responsive stylesheet is linked');
+const compiledCss = fs.readFileSync(path.join(root, css), 'utf8');
+for (const selector of ['.mememe-setup-069', '.mememe-lobby-069', '.setup-grid', '.lobby-grid']) {
+  assert.ok(compiledCss.includes(selector), 'Missing authored Phaser DOM layout: ' + selector);
 }
-assert.ok(html.indexOf('assets/responsive-ui-v1.css') > html.indexOf(css),
-  'Responsive stylesheet must load after the compiled stylesheet');
-// This sheet must not distort gameplay; world-camera fit/fill needs source changes.
-assert.doesNotMatch(fluidCss, /canvas(?:[^{}]*)\{[^{}]*(?:width:\s*100vw|transform:\s*scale)/i,
-  'Do not resize or scale the authoritative game canvas in a DOM stylesheet');
-console.log('PASS responsive UI stylesheet link, coverage, and no-canvas-stretch guardrail');
+assert.ok(js.includes('width:1280,height:720'),
+  'Review and update UI layout coordination if Phaser logical viewport changes');
+assert.ok(js.includes('Scale.FIT'),
+  'Review UI/backdrop layout contract if Phaser scale mode changes');
+console.log('PASS authored Phaser DOM/backdrop layout contract; risky fluid v1 override disabled');
 
 console.log('PASS compiled asset presence and release-state marker checks');
 console.log('NOTE: Not a behavioral pass. Jail/hospital release RNG and CPU modal behavior require source/replay hooks.');
