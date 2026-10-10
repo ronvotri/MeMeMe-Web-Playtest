@@ -4,14 +4,19 @@
 
 A game UI that remains functional at different browser zoom levels, desktop monitors, ultrawide, mobile portrait/landscape and Steam Deck. No decorative black letterboxing, no clipped buttons, no microtext caused by scale-to-fit. Preserve board interaction coordinates and readable touch targets.
 
-## What was actually delivered to this *compiled mirror*
+## Incident: detached Phaser backdrop and DOM panel (2026-10-10)
 
-- `assets/responsive-ui-v1.css` is loaded after the original compiled stylesheet.
-- Fluid sizing and bounded scroll for DOM-driven menu, lobby, setup, character selection, rules, quick mini game, result, online room and editor screens.
-- Adaptive card grids for smaller screens and short landscape viewports.
-- Safe-area-aware popup sizing and BGM HUD placement.
-- Background extends to the viewport edges; legacy shadow border on the gameplay canvas removed.
-- CI smoke guards that the responsive stylesheet is linked and that no stretch-based canvas hack is introduced.
+**Screenshots received at 885×747 and 961×910 showed that v1 is unusable.**
+
+Root cause verified in the compiled JS:
+- Phaser is configured at `1280×720`, `scale.mode = Phaser.Scale.FIT`, `autoCenter = CENTER_BOTH`.
+- Game menu backgrounds are Phaser drawings at fixed *world* positions and dimensions.
+- Menu cards are HTML nodes wrapped in Phaser DOMElements positioned around `(640, 360)` or `(640, 410)` in those same coordinates.
+- `responsive-ui-v1.css` changed DOM panel width and grid columns based on **browser viewport width**, not the Phaser logical stage width. The Phaser background did not change. Setup cards moved over headings/footer and outside their scene backdrop; the lobby showed misplaced cards and large letterbox bands.
+
+**Safety rollback shipped:** `index.html` no longer loads `assets/responsive-ui-v1.css`. The experimental file remains for forensic reference ONLY, and CI now fails if it is linked again. This returns DOM sizing to the authored fixed-scene contract; this **does not** make the game truly multi-aspect.
+
+Do not re-enable a fluid DOM-only stylesheet or stretch/cover the canvas as a workaround. Rebuild from gameplay source and update Phaser world/backdrop/HUD/DOM together.
 
 ## Important limitation
 
@@ -27,7 +32,7 @@ The deployed playtest repo is a *compiled export only* (index.html, CSS, bundled
 4. Move HUD and overlays into safe anchored zones that do **not** cover the board or each other. Support 21:9, 16:9, 16:10, 4:3 and portrait using layouts rather than global `scale()` hacks.
 5. On narrow portrait, either use a dedicated board layout with pan/zoom and fixed overlay controls, or rotate the **board camera only** while keeping text/buttons upright; never block actual gameplay with a permanent rotate-device screen.
 6. Check all UI transitions (Splash → Lobby → Setup → Character → Rules → Roll For Order → Board → Job/Card/News/Mini Game → Podium → Recap), including CPU automations, after resizing.
-7. Rebuild and publish the compiled output, preserving the standalone responsive CSS layer or merging equivalent source-owned responsive styles; do not let the next compile silently revert this work.
+7. Rebuild and publish the compiled output only after Phaser/DOM shared layout adaptation is implemented and tested. Do **not** re-enable the experimental v1 CSS.
 
 ## Manual viewport acceptance matrix
 
