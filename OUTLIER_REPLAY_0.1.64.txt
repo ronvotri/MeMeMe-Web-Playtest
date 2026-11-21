@@ -2,23 +2,23 @@ MeMeMe OUTLIER REPLAY PACK 0.1.71
 Roguelike Lap Shuffle intentionally consumes HOST RNG and changes later tile outcomes after the first finisher crosses each lap.
 Historical 0.1.63.4 fingerprints remain in tests/outlier-replay-0634.ts and are not rewritten.
 seed=611102 reason=0.1.71-roguelike-lap-shuffle-longest-match-ch19-shops
-checksum=0320c400
-turns=62 commands=102 submitted=88 hostAuto=14
-moneyTotal=1153 spread=109
-movement=59 release=8 cards=11 news=5
-mini=6 miniResolved=6 miniPayout=263
-jobs=4 lottery=0/0B$
-finishIds=0,3,2,1
-finalMoney=339,337,230,247
-finishPlaces=1,4,3,2
+checksum=072d51b9
+turns=44 commands=72 submitted=61 hostAuto=11
+moneyTotal=1240 spread=65
+movement=42 release=4 cards=7 news=6
+mini=5 miniResolved=5 miniPayout=250
+jobs=3 lottery=0/0B$
+finishIds=3,1,2,0
+finalMoney=345,330,280,285
+finishPlaces=4,2,3,1
 seed=611112 reason=0.1.71-roguelike-lap-shuffle-largest-money-spread-ch19-shops
-checksum=bbf7c756
-turns=60 commands=95 submitted=82 hostAuto=13
-moneyTotal=1280 spread=110
-movement=59 release=4 cards=13 news=8
-mini=3 miniResolved=3 miniPayout=145
-jobs=3 lottery=2/120B$
-finishIds=3,0,1,2
-finalMoney=325,385,295,275
-finishPlaces=2,3,4,1
+checksum=f389f916
+turns=65 commands=96 submitted=83 hostAuto=13
+moneyTotal=1505 spread=280
+movement=60 release=10 cards=7 news=11
+mini=2 miniResolved=2 miniPayout=95
+jobs=4 lottery=1/120B$
+finishIds=1,2,3,0
+finalMoney=550,355,330,270
+finishPlaces=4,1,2,3
 LOCKED: exact 0.1.71 Roguelike Lap Shuffle outlier fingerprints for the retained deterministic sentinels.
